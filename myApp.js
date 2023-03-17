@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
     res.sendFile(absolutePath)
 });
 
+console.log(process.env.MESSAGE_STYLE)
 app.get("/json", (req,res) => {
     let message = "Hello json";
 
