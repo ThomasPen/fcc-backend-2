@@ -20,6 +20,12 @@ app.get("/:word/echo", (req,res) => {
     res.json({echo: req.params.word});
 });
 
+app.get("/name", (req,res) => {
+    res.json({"name": req.query.firstname + " " + req.query.lastname});
+}).post("/name", (req,res) => {
+    res.json({"name": req.query.firstname + " " + req.query.lastname});
+})
+
 app.get("/", (req, res) => {
     let absolutePath = __dirname + '/views/index.html'
     res.sendFile(absolutePath)
