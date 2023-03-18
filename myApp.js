@@ -24,9 +24,9 @@ app.get("/:word/echo", (req,res) => {
 });
 
 app.get("/name", (req,res) => {
-    res.json({"name": req.query.first + " " + req.query.last});
+    res.json({"name": req.body.first + " " + req.body.last});
 }).post("/name", (req,res) => {
-    res.json({"name": req.query.first + " " + req.query.last});
+    res.json({"name": req.body.first + " " + req.body.last});
 })
 
 app.get("/", (req, res) => {
